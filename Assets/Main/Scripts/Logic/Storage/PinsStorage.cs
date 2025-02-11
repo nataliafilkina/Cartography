@@ -97,15 +97,15 @@ namespace Logic
             {
                 if (add.Value != null)
                 {
-                    string imageName = (++maxClipId).ToString();
-                    add.Key.ImageName = imageName;
-                    _audioStorage.SaveWav(add.Value, imageName);
+                    string audioName = (++maxClipId).ToString();
+                    add.Key.AudioName = audioName;
+                    _audioStorage.SaveWav(add.Value, audioName);
                 }
                 else
-                    add.Key.ImageName = "";
+                    add.Key.AudioName = "";
             }
-            _removedImageByIdPin.Clear();
-            _addedImageByIdPin.Clear();
+            _removedAudioByIdPin.Clear();
+            _addedAudioByIdPin.Clear();
             return maxClipId;
         }
     }
